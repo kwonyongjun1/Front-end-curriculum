@@ -92,7 +92,84 @@ function doublePoint(point: Point): Point {
 
 ### 5. 중첩 객체
 
+중첩된 객체인 경우 어노테이션 처리를 어떻게 할까?
+같은 형식으로 중첩하여 타입을 정의하면 된다.
+
+```javascript
+type Song = {
+  title: string;
+  artist: string;
+  numStreams: number;
+  credits: { producer: string; writer: string};
+};
+
+const mySong: Song = {
+  title : "Melody",
+  artist : "eminem",
+  numStreams : 123,
+  credits: {
+    producer : "Paul",
+    writer : "Alex"
+  }
+}
+```
+
+### 6. 선택적 프로퍼티
+
+객체와 객체 타입 설정에 관한 것 중 선택적 프로퍼티 생성 방법도 있다.
+즉, 일부 프로퍼티를 선택적 요소로 만들 수 있다. 
+
+프로퍼티 뒤에 ?를 붙이면된다.
+```javascript
+type Point = {
+  x: number;
+  y: number;
+  z?: number; // 선택적 프로퍼티
+}
+
+const myPoint: Point = {x: 1,y: 2}; // compile
+```
 
 
+### 7. readonly 제어자
 
+객체 내의 특정 프로퍼티를 표시하거나 배열이나 클래스에 접근할 때 사용되며
 
+객체의 프로퍼티를 readonly로 표시하면 TypeScript에서는 프로퍼티를 변경할 때 경고를 해준다.
+
+``` javascript
+type User = {
+  readonly id: number;
+  username: string;
+};
+  
+const user: User = {
+  id : 123,
+  username : "catgurl"
+}
+
+console.log(user.id); // compile
+user.id = 789; // error
+
+```
+
+### 8. 교차 타입
+
+2개 이상의 타입을 교차하여 사용할 수 있다.
+
+``` javscript
+type Circle = {
+  radius : number;
+}
+
+type Colorful = {
+  color : string;
+}
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "yellow" 
+};
+```
