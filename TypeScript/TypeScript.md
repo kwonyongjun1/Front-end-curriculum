@@ -1,3 +1,7 @@
+
+
+TypeScript link : https://www.typescriptlang.org/
+
 ### TypeScript 란?
 
 
@@ -17,8 +21,8 @@
 ###### javascript 컴파일링 터미널 명령어 (Typescript -> javascript)
 
 ```Terminal
-
-tsc 파일명.ts
+tsc           // 모든 파일 컴파일 할 경우
+tsc 파일명.ts // 특정 파일 컴파일 할 경우
 ```
 
 Typescript를 통해 javascript의 코드 오류를 검사할 수 있고
