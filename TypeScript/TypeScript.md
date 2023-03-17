@@ -1,24 +1,29 @@
 
 ### 📒TypeScript 마스터 with Webpack & React
 
-[Step01.타입 어노테이션 기초](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step01.%ED%83%80%EC%9E%85%20%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%20%EA%B8%B0%EC%B4%88.md)
+----
 
-[Step02.함수](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step02.%ED%95%A8%EC%88%98.md)
+* [Step01.타입 어노테이션 기초](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step01.%ED%83%80%EC%9E%85%20%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98%20%EA%B8%B0%EC%B4%88.md)
 
-[Step03.객체 타입](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step03.%EA%B0%9D%EC%B2%B4%20%ED%83%80%EC%9E%85.md)
+* [Step02.함수](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step02.%ED%95%A8%EC%88%98.md)
 
-[Step04.배열 타입](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step04.%EB%B0%B0%EC%97%B4%20%ED%83%80%EC%9E%85.md)
+* [Step03.객체 타입](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step03.%EA%B0%9D%EC%B2%B4%20%ED%83%80%EC%9E%85.md)
 
-
-[Step05.유니온 타입](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step05.%EC%9C%A0%EB%8B%88%EC%98%A8%20%ED%83%80%EC%9E%85.md)
-
-[Step06.Tuple과 Enum](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step06.Tuple%EA%B3%BC%20Enum.md)
-
-[Step07.인터페이스](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step07.%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
+* [Step04.배열 타입](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step04.%EB%B0%B0%EC%97%B4%20%ED%83%80%EC%9E%85.md)
 
 
+* [Step05.유니온 타입](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step05.%EC%9C%A0%EB%8B%88%EC%98%A8%20%ED%83%80%EC%9E%85.md)
+
+* [Step06.Tuple과 Enum](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step06.Tuple%EA%B3%BC%20Enum.md)
+
+* [Step07.인터페이스](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step07.%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
 
 
+
+----
+
+
+### 📒TypeScript 기본 개념
 
 
 TypeScript link : https://www.typescriptlang.org/
@@ -47,3 +52,6 @@ tsc 파일명.ts // 특정 파일 컴파일 할 경우
 
 Typescript를 통해 javascript의 코드 오류를 검사할 수 있고
 tsc 명령어를 통해 JavaScript로 컴파일링도 가능하다.
+
+
+-------------
