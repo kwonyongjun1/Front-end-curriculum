@@ -15,6 +15,9 @@ function readTodos() {
         return [];
     return JSON.parse(todoListJSON);
 }
+function saveTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
 /**
  * click 이벤트
  * @param e
@@ -27,7 +30,7 @@ function handleSubmit(e) {
     };
     todos.push(newTodo);
     createTodo(newTodo);
-    localStorage.setItem("todos", JSON.stringify(todos));
+    saveTodos();
     input.value = "";
 }
 /**
@@ -38,6 +41,11 @@ function createTodo(todo) {
     const newLi = document.createElement("li");
     const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
+    checkBox.checked = todo.completed;
+    checkBox.addEventListener("change", function () {
+        todo.completed = checkBox.checked;
+        saveTodos();
+    });
     newLi.append(todo.text);
     newLi.append(checkBox);
     list === null || list === void 0 ? void 0 : list.append(newLi);

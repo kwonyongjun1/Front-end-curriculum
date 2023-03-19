@@ -22,6 +22,12 @@ function readTodos(): Todo[]{
 }
 
 /**
+ * todo 로컬스토리지에 저장
+ */
+function saveTodos(){
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
+/**
  * click 이벤트
  * @param e 
  */
@@ -34,7 +40,7 @@ function handleSubmit(e : SubmitEvent){
     todos.push(newTodo);
     createTodo(newTodo);
    
-    localStorage.setItem("todos", JSON.stringify(todos));
+    saveTodos();
     input.value = "";
 }
 
@@ -46,6 +52,11 @@ function createTodo(todo: Todo){
     const newLi = document.createElement("li");
     const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
+    checkBox.checked = todo.completed;
+    checkBox.addEventListener("change", function() {
+        todo.completed = checkBox.checked;
+        saveTodos();
+    })
     newLi.append(todo.text);
     newLi.append(checkBox);
     list?.append(newLi);
