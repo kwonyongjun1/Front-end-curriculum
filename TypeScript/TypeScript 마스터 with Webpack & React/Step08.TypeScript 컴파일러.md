@@ -177,11 +177,28 @@ TypeScript를 컴파일한 JavaScript의 버전을 제어하는 옵션이다.
 "target" : "es6"
 ```
 
+
+### - lib 옵션
+
+###### tsconfig.json
+```
+"lib" : [
+  "dom",
+  "es5"
+]
+```
+lib 옵션의 기본값은 target 항목에서 지정한 ECMAScript의 버전에 따라 기본값이 정의됩니다.
+대부분의 경우 기본값만 사용하지만 TypeScript 라이브러리를 커스텀하게 쓰려고 할 때, lib을 정의하여 사용한다.
+
+
+
 ### - strict 옵션
 
 TypeScript 전체의 타입 검사 추가규칙,제약 조건이 활성화 된다. 즉, 타입 검사를 보다 엄격하게 만들며
 프로그램의 정확성을 높이는 것이 핵심이다.
-
+###### tsconfig.json
 ```
 "strict" : true
 ```
+
+
