@@ -149,3 +149,110 @@ elton.score = 99;
 console.log(elton.score); // 99
 ```
 
+### 8. protected 제어자
+
+<br>
+
+상속 작업 때 사용되며 protected를 사용하면 외부에서 액세스하는 게 불가능하지만 
+자식 클래스는 액세스가 가능하다.
+
+<br>
+
+```javascript
+class Player{
+    constructor(
+        public first: string,
+        public last: string,
+        protected _score: number){
+
+    }
+}
+
+class SuperPlayer extends Player{
+    public isAdmin:boolean = true;
+    maxScore(){
+        this._score = 999;
+    }
+}
+```
+<br>
+
+public은 어디서나 액세스 가능하고 
+private은 정의된 해당 클래스에서만 사용 가능하고
+protected는 정의된 클래스와 그로부터 상속한 모든 클래스에서 액세스할 수 있다.
+
+### 9. 클래스와 인터페이스
+
+<br>
+
+인터페이스를 구현하는 클래스는 간단하지만 아주 흔히 사용되는 방법이다.
+
+```javascript
+interface Colorful{
+    color: string;
+}
+
+interface Printable{
+    print(): void;
+}
+
+class Bike implements Colorful{
+    constructor(public color: string){}
+}
+
+class Jacket implements Colorful, Printable{
+    constructor(public brand:string, public color:string){}
+
+    print(){
+        console.log(` ${this.color} ${this.brand} jacket`);
+    }
+}
+```
+
+### 10. Abstract 클래스 
+<br>
+
+TypeScript에서의 Abstract은 이 자체로는 더 이상 새 클래스를 만들 수 없다는걸 의미한다.
+abstract 클래스는 패턴을 정의하고 자식 클래스에서 시행돼야 하는 메서드를 정의하는데 사용된다.
+인터페이스는 객체의 형태만 존재하고 abstract 클래스는 확장하는 클래스에 기능 즉, 패턴을 정의할 수 있다.
+
+메서드 앞에 abstract를 붙이면 자식 클래스가 해당 메서드를 반드시 시행해야한다.
+
+```javascript
+abstract class Employee{
+    constructor(public first: string, public last: string){}
+    abstract getPay(): number; //Employee를 확장하는 모든 클래스에 존재해야한다
+    greet(){
+        console.log("hi");
+    }
+}
+
+class FullTimeEmployee extends Employee{
+    constructor(first: string, last: string, private salary: number){
+        super(first,last);
+    }
+    getPay(): number {
+        return this.salary;
+    }
+    
+}
+
+class PartTimeEmployee extends Employee{
+    constructor(
+        first: string, 
+        last: string, 
+        private hourlyRate: number, 
+        private hoursWorked: number){
+        super(first,last);
+    }
+    getPay(): number {
+        return this.hourlyRate * this.hoursWorked;
+    }
+}
+
+const betty = new FullTimeEmployee("Betty", "White", 9500);
+console.log(betty.getPay()); // 9500 
+console.log(betty.greet());  // hi
+
+```
+확장할 abstract 클래스와 interface는 동시에 구현이 가능하다
