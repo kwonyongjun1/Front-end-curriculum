@@ -1,6 +1,6 @@
-import Dog from "./Dog.js"
-import ShelterDog from "./ShelterDog.js"
-import {add, multiply, divde} from "./utils.js"
+import Dog from "./Dog"
+import ShelterDog from "./ShelterDog"
+import {add, multiply, divde} from "./utils"
 console.log("FROM INDEX FILE!");
 
 const elton = new Dog("Elton", "Aussie", 0.5);

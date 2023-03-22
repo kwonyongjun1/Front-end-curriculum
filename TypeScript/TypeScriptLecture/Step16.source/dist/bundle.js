@@ -1,0 +1,1 @@
+(()=>{"use strict";class s{constructor(s,e,o){this.name=s,this.breed=e,this.age=o}bark(){console.log("WOOF !!")}}console.log("FROM INDEX FILE!"),new s("Elton","Aussie",.5).bark(),console.log(9),console.log(20),console.log(.8),new class extends s{constructor(s,e,o,l){super(s,e,o),this.shelter=l}}("Buffy","Pitbull",5,"Desert Springs Shelter")})();
