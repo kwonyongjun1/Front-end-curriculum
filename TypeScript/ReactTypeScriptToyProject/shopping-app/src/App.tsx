@@ -7,7 +7,10 @@ import './App.css';
 
 function App() {
   const[items,setItems] = useState<Item[]>([]);
-  
+  const addItem = (product: string) =>{
+    console.log("MADE TO THE APP COMPONENT!");
+    console.log(product);
+  }
   //setItems는 함수 
 //   const items = [
 //     {id: 1, product: "Lemon", quantity: 3},
@@ -16,7 +19,7 @@ function App() {
   return (
     <div>
       <ShoppingList items={items}></ShoppingList>
-      <ShoppingListForm></ShoppingListForm>
+      <ShoppingListForm onAddItem={addItem}></ShoppingListForm>
     </div>
   );
 }
