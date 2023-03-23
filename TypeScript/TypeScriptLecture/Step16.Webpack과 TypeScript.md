@@ -69,3 +69,21 @@ module.exports = {
   },
 };
 ```
+
+### 4. 소스맵 추가하기
+
+소스 맵은 배포용으로 빌드한 파일과 원본 파일을 서로 연결시켜주는 기능이다.
+보통 서버에 배포를 할 때 성능 최적화를 위해 HTML, CSS, JS와 같은 웹 자원들을 압축하는데 만약 압축하여 배포한 파일에서 에러가 난다면 어떻게 디버깅을 할 수 없어 소스 맵을 이용해 배포용 파일의 특정 부분이 원본 소스의 어떤 부분인지 확인할 수 있다.
+###### tsconfig.json
+```
+"compilerOptions": {
+  "sourceMap": true
+}
+```
+
+###### webpack.config.js
+```
+module.exports = {
+    devtool: 'inline-source-map'
+}
+```
