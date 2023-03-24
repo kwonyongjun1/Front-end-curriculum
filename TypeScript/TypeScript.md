@@ -18,8 +18,23 @@
 
 * [Step07.인터페이스](https://github.com/kwonyongjun1/Front-end-curriculum/blob/c0b8071f6fedc5e1e41cfb03dd1948047de497d4/TypeScript/TypeScript%20%EB%A7%88%EC%8A%A4%ED%84%B0%20with%20Webpack%20&%20React/Step07.%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
 
+* [Step08.TypeScript.컴파일러](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step08.TypeScript%20%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC.md)
 
+* [Step09.Dom,타입단언,그리고 더 많은 내용](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step09.Dom,%ED%83%80%EC%9E%85%EB%8B%A8%EC%96%B8,%EA%B7%B8%EB%A6%AC%EA%B3%A0%20%EB%8D%94%20%EB%A7%8E%EC%9D%80%20%EB%82%B4%EC%9A%A9.md )
 
+* [Step10.JavaScript 클래스](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step10.JavaScript%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)
+
+* [Step11.TypeScript 클래스](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step11.TypeScript%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)
+
+* [Step12.제네릭](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step12.%EC%A0%9C%EB%84%A4%EB%A6%AD.md)
+
+* [Step13.타입 좁히기](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step13.%ED%83%80%EC%9E%85%20%EC%A2%81%ED%9E%88%EA%B8%B0.md)
+
+* [Step14.타입선언(Declarations)을 이용해 작업하기](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step14.%ED%83%80%EC%9E%85%EC%84%A0%EC%96%B8(Declarations)%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EC%9E%91%EC%97%85%ED%95%98%EA%B8%B0.md)
+
+* [Step15.모듈](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step15.%EB%AA%A8%EB%93%88.md)
+
+* [Step16.Webpack과 TypeScript](https://github.com/kwonyongjun1/Front-end-curriculum/blob/66a2fb7daffdafd87c473b6be891771aa74d77fc/TypeScript/TypeScriptLecture/Step16.Webpack%EA%B3%BC%20TypeScript.md) 
 ----
 
 
