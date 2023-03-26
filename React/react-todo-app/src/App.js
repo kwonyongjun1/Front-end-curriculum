@@ -14,7 +14,8 @@ export default class App extends Component{
         title: "청소하기",
         isCompleted: false
       }
-    ]
+    ],
+    value : ""
   }
   btnStyle = {
     color : "#fff",
@@ -38,7 +39,22 @@ export default class App extends Component{
     this.setState({ todoData : newTodoData})
   }
   
+  handleChange = (e) =>{
+    this.setState({ value : e.target.value});
+  }
 
+  handleSubmit = (e) =>{
+    // form 안에 input을 전송할 때 페이지 리로드 되는 걸 막아줌
+    e.preventDefault();
+
+    let newTodo = {
+      id: Date.now(),
+      title: this.state.value,
+      completed: false,
+    }
+
+    this.setState({ todoData : [...this.state.todoData, newTodo]});
+  }
   render(){
     return(
       <div className='container'>
@@ -54,6 +70,23 @@ export default class App extends Component{
             <button style={this.btnStyle} onClick={() => this.handleClick(data.id)}>X</button>
           </div>
           ))}
+
+            <form style = {{display: 'flex'}} onSubmit={this.handleSubmit}>
+              <input 
+                type = "text" 
+                name = "value" 
+                style= {{ felx : '10', padding : '5px'}}
+                placeholder="해야 할 일을 입력하세요."
+                value = {this.state.value}
+                onChange={this.handleChange}
+                />
+                <input 
+                  type="submit"
+                  value="입력"
+                  className="btn"
+                  style={{flex: '1'}}
+                />
+            </form>
           
         </div>
       </div>
