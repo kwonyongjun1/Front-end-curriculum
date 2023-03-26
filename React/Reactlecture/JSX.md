@@ -25,3 +25,22 @@ JSX를 사용하면서 지켜줘야할 규칙이 있는데
 처음으로 JSX는 컴포넌트에 여러 엘리먼트 요소가 있다면 반드시 부모 요소 하나로 감싸줘야 한다.
 
 ![image](https://user-images.githubusercontent.com/70560755/227761104-58b86df7-6a0c-4509-bc79-02dcd5f15fab.png)
+
+### 4. JSX Key 속성
+
+
+``` javascript
+{this.todoData.map((data, index) => (
+            <div style={this.getStyle()} key={data.id}>
+            <input type= "checkbox" defaultChecked={data.isCompleted}/>
+            {data.title}
+            <button style={this.btnStyle}>X</button>
+          </div>
+          ))}
+```
+리액트에서 요소의 리스트를 나열할 때는 Key를 넣어줘야한다.
+
+키는 React가 변경, 추가 또는 제거된 항목을 식별하는 데 도움이 됩니다. 요소에 안정적인 ID를 부여하려면 배열 내부의 요소에 키를 제공해야한다.
+
+###### key에는 유니크한 값을 넣어줘야하며 index도 0부터 시작해서 유니크한 값을 가지지만 만약 리스트가 추가되거나 제거되면 해당 리스트들의 key값도 바뀌게 되어 key 속성으로 적절하지 않다.
+
