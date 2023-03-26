@@ -2,22 +2,42 @@ import React, {Component}from 'react';
 import './App.css';
 
 export default class App extends Component{
-btnStyle = {
-  color : "#fff",
-  border : "none",
-  padding : "5px 9px",
-  borderRadius : "50%",
-  cursor : "pointer",
-  float : "right"
-}
-
-getStyle = () =>{
-  return {
-    padding : "10px",
-    borderBottom : "1px #ccc dotted",
-    textDecoration : 'none'
+  state = {
+    todoData : [
+      {
+        id: "1",
+        title: "공부하기",
+        isCompleted: true
+      },
+      {
+        id: "2",
+        title: "청소하기",
+        isCompleted: false
+      }
+    ]
   }
-}
+  btnStyle = {
+    color : "#fff",
+    border : "none",
+    padding : "5px 9px",
+    borderRadius : "50%",
+    cursor : "pointer",
+    float : "right"
+  }
+
+  getStyle = () =>{
+    return {
+      padding : "10px",
+      borderBottom : "1px #ccc dotted",
+      textDecoration : 'none'
+    }
+  }
+
+  handleClick = (id) =>{
+    let newTodoData = this.state.todoData.filter((data) => data.id !== id);
+    this.setState({ todoData : newTodoData})
+  }
+  
 
   render(){
     return(
@@ -27,11 +47,14 @@ getStyle = () =>{
             <h1>할 일 목록</h1>
           </div>
 
-          <div style={this.getStyle()}>
-            <input type= "checkbox" defaultChecked={false}/>
-            공부하기
-            <button style={this.btnStyle}>X</button>
+          {this.state.todoData.map((data, index) => (
+            <div style={this.getStyle()} key={data.id}>
+            <input type= "checkbox" defaultChecked={data.isCompleted}/>
+            {data.title}
+            <button style={this.btnStyle} onClick={() => this.handleClick(data.id)}>X</button>
           </div>
+          ))}
+          
         </div>
       </div>
     )
