@@ -5,13 +5,8 @@ import List from './components/List';
 
 export default function App(){
 
-  const [todoData, setTodoDate] = useState([]);
+  const [todoData, setTodoData] = useState([]);
   const [value, setValue] = useState("");
-
-  
-  
-  
-  
 
   const handleSubmit = (e) =>{
     // form 안에 input을 전송할 때 페이지 리로드 되는 걸 막아줌
@@ -23,10 +18,11 @@ export default function App(){
       isCompleted: false,
     }
 
-    setTodoDate(prev =>
+    setTodoData(prev =>
       [...prev, newTodo]
     )
-    setValue("")
+
+    setValue(" ");
 
   }
 
@@ -35,13 +31,13 @@ export default function App(){
     return(
       <div className="flex items-center justify-center w-screen h-screen bg-blue-100">
         <div className='w-full p-6 m-4 bg-white rounded shadow lg:w-3/4 lg:max-w-lg'>
-          <div className='flex justify-between mb-3'>
+          <div className='flex justify-between'>
             <h1>할 일 목록</h1>
           </div>
 
-          <List todoData = {todoData} setTodoDate = {setTodoDate}/>
+          <List todoData = {todoData} setTodoData = {setTodoData}/>
 
-          <Form handleSubmit={handleSubmit} setTodoDate = {setTodoDate} setValue = {setValue}/>  
+          <Form handleSubmit={handleSubmit} setTodoData = {setTodoData} setValue = {setValue}/>  
           
         </div>
       </div>
