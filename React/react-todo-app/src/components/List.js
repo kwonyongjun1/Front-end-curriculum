@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function List({
+const List = React.memo(({
     id, title, isCompleted, todoData, setTodoData, provided, snapshot
-}) {
+}) => {
+  console.log('List Component')
 
     const handleCompleteChange = (id) =>{
         let newTodoData = todoData.map((data) =>{
@@ -37,4 +38,6 @@ export default function List({
                   </div>
     </div>
   )
-}
+})
+
+export default List
