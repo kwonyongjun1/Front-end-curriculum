@@ -3,10 +3,11 @@ import './App.css';
 import Form from './components/Form';
 import Lists from './components/Lists';
 
-export default function App(){
+const initialTodoData = localStorage.getItem("todoData") ? JSON.parse(localStorage.getItem("todoData")) : [];
 
-  console.log('App Component')
-  const [todoData, setTodoData] = useState([]);
+function App(){
+
+  const [todoData, setTodoData] = useState(initialTodoData);
   const [value, setValue] = useState("");
 
   const handleSubmit = (e) =>{
@@ -22,6 +23,7 @@ export default function App(){
     setTodoData(prev =>
       [...prev, newTodo]
     )
+    localStorage.setItem("todoData", JSON.stringify([...todoData, newTodo]));
 
     setValue(" ");
 
@@ -29,10 +31,12 @@ export default function App(){
 
   const handleClick = useCallback((id) =>{
     let newTodoData = todoData.filter((data) => data.id !== id);
-    setTodoData(newTodoData)
+    setTodoData(newTodoData);
+    localStorage.setItem("todoData", JSON.stringify(newTodoData));
   }, [todoData])
   
   const handleRemoveClick = () =>{
+    localStorage.setItem("todoData", JSON.stringify([]));
     setTodoData([]);
   }
     return(
@@ -50,4 +54,6 @@ export default function App(){
         </div>
       </div>
     )
-};
+}
+
+export default App;

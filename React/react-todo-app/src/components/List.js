@@ -32,6 +32,7 @@ import React ,{useState}from 'react'
       return data;
     });
     setTodoData(newTodoData);
+    localStorage.setItem("todoData", JSON.stringify(newTodoData));
     setIsEditing(false);
   }
 
