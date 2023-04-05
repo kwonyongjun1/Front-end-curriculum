@@ -64,7 +64,7 @@ public class Client {
 }
 ```
 
-yVOFactoryImpl 클래스의 생성자에서 VO 타입을 인자로 받고, Factory 메소드에서 VO 타입에 따라 MyVOImpl1 또는 MyVOImpl2 클래스의 인스턴스를 생성합니다. 따라서, 클라이언트 코드에서는 MyVOImpl1 또는 MyVOImpl2 클래스의 존재를 알 필요가 없고, VO 타입에 따라 적절한 VO 객체를 생성하도록 Factory에 위임합니다.
+MyVOFactoryImpl 클래스의 생성자에서 VO 타입을 인자로 받고, Factory 메소드에서 VO 타입에 따라 MyVOImpl1 또는 MyVOImpl2 클래스의 인스턴스를 생성합니다. 따라서, 클라이언트 코드에서는 MyVOImpl1 또는 MyVOImpl2 클래스의 존재를 알 필요가 없고, VO 타입에 따라 적절한 VO 객체를 생성하도록 Factory에 위임합니다.
 
 
 이와 같은 방법으로 Factory Pattern을 사용하면, VO 클래스의 변경으로 인한 클라이언트 코드 수정을 최소화하면서 VO 객체 생성을 제어할 수 있습니다.
