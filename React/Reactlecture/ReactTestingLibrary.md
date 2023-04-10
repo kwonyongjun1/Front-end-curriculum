@@ -25,3 +25,25 @@ Enzyme이 구성 요소의 구현 세부 정보를 테스트하는 대신 React 
 즉, Enzyme은 구현 주도 테스트(Implementation Driven Test)를
 
 React TestingLibrary는 행위 주도 테스트(Behavior Driven Test)를 한다.
+
+
+### 쿼리함수
+
+<br>
+
+쿼리는 페이지에서 요소를 찾기 위해 테스트 라이브러리가 제공하는 방법입니다. 여러 유형의 쿼리("get", "find", "query")가 있다.
+
+
+<br>
+
+![image](https://user-images.githubusercontent.com/70560755/230906669-e978e256-9b6a-4094-83dd-53c0d44961be.png)
+
+<br>
+
+#### getBy... : 쿼리에 대해 일치하는 노드를 반환하고 일치하는 요소가 없거나 둘 이상의 일치가 발견되면 설명 오류를 발생
+
+
+#### queryBy... : 쿼리에 대해 일치하는 노드를 반환하고 일치하는 요소가 없으면 null을 반환 
+
+
+#### findBy... : 주어진 쿼리와 일치하는 요소가 발견되면 Promise를 반환
