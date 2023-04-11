@@ -35,3 +35,17 @@ test('when the - button is pressed, the counter changes to -1', () => {
   const coutnerElement = screen.getByTestId("counter");
   expect(coutnerElement).toHaveTextContent(-1);
 })
+
+test('on/off button has blue color ', () => {
+  render(<App/>)
+  const buttonElement = screen.getByTestId("on/off-button");
+  expect(buttonElement).toHaveStyle({backgroundColor : "blue"});
+})
+
+test('should first', () => {
+   render(<App/>);
+   const buttonElement = screen.getByTestId("on/off-button");
+   fireEvent.click(buttonElement);
+   const plustButtonElement = screen.getByTestId("plus-button");
+   expect(plustButtonElement).toBeDisabled();
+})
