@@ -28,7 +28,12 @@ Next.js에서는 Pre-Rendering을 통해서 페이지를 미리 렌더링 하며
 - Next.js에서는 서버 사이드 렌더링을 이용하므로 사용자와 검색 엔진 크롤러에게 바로 렌더링 된 페이지를 전달 할 수 있어서 검색엔진 최적화에 좋은 영향을 준다.
 
 
-### 설치방법
+### Pre-rendering
+
+NextJS는 모든 페이지를 pre-render 한다. 이 pre-render한다는 의미는 모든 페이지를 위한 HTML을 Client사이드에서 자바스크립트로  처리하기 전, "사전에" 생성한다는 것이다. 
+이렇게 하기 때문에 SEO 검색엔진 최적화가 좋아진다.
+
+### NextJS설치방법
 
 ```
 npx create-next-app@latest
