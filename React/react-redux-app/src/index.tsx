@@ -4,13 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
-import counter from './reducer'
-
+import rootReducer from './reducer'
+import counter from './reducer/counter'
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const store = createStore(counter);
+const store = createStore(rootReducer);
+
+store.dispatch({
+  type: "ADD_TODO",
+  text: "USE REDUX"
+})
+
+console.log("check", store.getState());
+
 const render = () => root.render(
   <React.StrictMode>
     <App 
