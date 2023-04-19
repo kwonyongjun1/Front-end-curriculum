@@ -35,7 +35,7 @@ const Home = ({allPostsData}:{
           allPostsData.map(({id, title, date})=> 
           <li className={homeStyles.listItem} key={id}>
             <Link href={`/posts/${id}`}>
-              <a>{title}</a>
+              {title}
             </Link>
             <br/>
             <small className={homeStyles.lightText}>
