@@ -21,7 +21,7 @@ const slice = createSlice({
 #### extraReducers: slice에서 처리하지 않는 액션 및 해당 액션에 대한 리듀서를 정의합니다.
 
 
-### configureStore는
+### configureStore
 
 configureStore는 Redux Toolkit에서 제공하는 유틸리티 함수 중 하나로, 스토어를 구성하고 초기화하는 역할을 합니다.
 
