@@ -1,0 +1,120 @@
+javascript는 멀티-패러다임 언어로 명령형(imperative), 함수형(functional), 프로토타입 기반(prototype-based) 객체지향 언어다.
+##### * javascript는 클래스 개념이 없어 프로토타입 기반 객체지향 언어이다.
+### 자바스크립트 객체 생성
+
+
+
+````javascript
+// 객체 리터럴
+var objA = {};
+objA.name = 'Lee';
+
+// Object() 생성자 함수
+var objB = new Object();
+objB.name = 'Lee';
+
+// 생성자 함수
+function Test() {}
+var objC = new Test();
+objC.name = 'Lee';
+
+````
+>- 객체 리터럴
+- Object() 생성자 함수
+- 생성자 함수
+
+javascript는 이미 생성된 인스턴스의 자료구조와 기능을 동적으로 변경할 수 있으며 함수 객체로 클래스,생성자,메소드 모두 함수로 구현할 수 있다.
+
+
+### 생성자 함수와 인스턴스의 생성
+````javascript
+//생성자 함수
+function A(id){
+ 	this.id = id;
+  	
+  	this.setId = function (id){
+     	this.id = id; 
+    }
+  
+  	this.getId = function (id){
+     	return this.id; 
+    }
+}
+
+//new 연산자 인스턴스 생성
+var test1 = new A('hi');
+console.log(test1.getId) // hi
+
+var test2 = new A('hello');
+console.log(test1.getId) // hello
+
+var test3 = new A('bye');
+console.log(test1.getId) // bye
+````
+
+javascript는 위 코드와 같이 생성자 함수와 new 연산자를 사용해 인스턴스를 생성할 수 있지만 **인스턴스와 중복되는 메소드가 많아지는 단점**이 있다. 이는 메모리 낭비에 직결되는데 메모리 낭비의 단점을 보완하기 위해 **프로토타입**을 이용한다.  
+
+### 프로토타입 체인과 메소드의 정의
+
+javascript의 모든 객체는 다른 객체를 가리키는 내부 링크인 **프로토타입**을 갖고있으며 프로토타입을 통해 직접 객체를 연결하는 것을 **프로토타입 체인** 이라고 한다.
+
+````javascript
+function A(id){
+  this.id = id;
+}
+
+A.prototype.setId = function (id){
+  this.id = id;
+};
+
+A.prototype.getId = function (id){
+  return this.id
+};
+
+var test1 = new A('hi');
+var test2 = new A('hello');
+var test3 = new A('bye');
+
+console.log(test1); // A {name : hi}
+console.log(test1); // A {name : hello}
+console.log(test1); // A {name : bye}
+
+````
+
+생성자 함수 내부의 메소드를 생성자 함수의 prototype 프로퍼티가 가리키는 프로토타입 객체로 이동시키면 생성자 함수에 의해 생성된 모든 인스턴스는 프로토타입 체인을 통해 프로토타입 객체의 메소드를 참조할 수 있다.
+
+### 자바스크립트 상속
+상속은 코드 재사용의 관점에서 유용하다.
+javascript에서는 프로토타입을 통해 객체가 다른 객체로 직접 상속을 할 수 있으며 구현 방식은 크게 **의사 클래스 패턴 상속, 프로토타입 패턴 상속**으로 나눌 수 있다.
+
+
+### 자바스크립트 캡슐화와 모듈 패턴
+
+캡슐화는 관련있는 멤버 변수와 메소드를 클래스와 같은 하나의 틀 안에 담고 외부에 공개될 필요가 없는 정보는 숨기는 것이며 정보은닉이라고 한다.
+````javascript
+var person = function(arg) {
+  var name = arg ? arg : ''; // 함수 내의 변수이므로 외부에서 참조 할 수 없음
+
+  return {
+    getName: function() {
+      return name;
+    },
+    setName: function(arg) {
+      name = arg;
+    }
+  }
+}
+
+var me = person('Lee'); /* or var me = new person('Lee'); */
+
+var name = me.getName();
+
+console.log(name);
+
+me.setName('Kim');
+name = me.getName();
+
+console.log(name);
+
+````
+ javascript에서는 java와같이 public, private이 없지만 ** 함수레벨스코프(function-level scope)를 제공하므로 함수 내의 변수는 외부에서 참조할 수 없는 특징을 이용하여 캡슐화(정보 은닉)**을 할 수 있으며  객체 내의 메소드 getName, setName을 통해 private 변수 name에 접근하는 방식을 모듈 패턴이라한다.
